@@ -1,3 +1,4 @@
+// hi
 class Grass {
     constructor(x, y, index) {
         this.x = x;
