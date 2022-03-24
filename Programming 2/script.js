@@ -10,6 +10,9 @@ function setup() {
     let creatorCountElement = document.getElementById('creatorCount');
 
     socket.on("data", draw)
+    socket.on("weather", function (data) {
+        weath = data
+    })
 
     function draw(data) {
         matrix = data.matrix
@@ -26,18 +29,34 @@ function setup() {
             for (var x = 0; x < matrix[y].length; x++) {
 
                 if (matrix[y][x] == 1) {
-                    fill("green");
+                    // fill("green");
+                    if (weath == "spring") {
+                        fill("green")
+                    }
+                    else if(weath == "summer") {
+                        fill("#bcf542")
+                    }
+                    else if(weath == "autumn") {
+                        fill("#ffbe4d")
+                    }
+                    else if(weath == "winter") {
+                        fill("white")
+                    }
                 }
                 else if (matrix[y][x] == 2) {
+                    //
                     fill("yellow");
                 }
                 else if (matrix[y][x] == 3) {
+                    //
                     fill("black");
                 }
                 else if (matrix[y][x] == 4) {
+                    //
                     fill("blue");
                 }
                 else if (matrix[y][x] == 5) {
+                    //
                     fill("magenta");
                 }
                 else if (matrix[y][x] == 0) {
