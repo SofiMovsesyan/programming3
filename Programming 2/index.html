@@ -1,19 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <script src="socket.io/socket.io.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-   <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="script.js"></script>
+    <style>
+    canvas {
+        display: block;
+        margin: 0 auto;
+    }
+
+    div {
+        display: inline-block;
+    }
+
+    h1 {
+        padding: 20px;
+        text-align: center;
+    }
+    </style>
 </head>
+
 <body>
-<p id="grassCount"></p>
-<p id="grassEaterCount"></p>
-<p id="gishatichCount"></p>
-<p id="peopleCount"></p>
-<p id="creatorCount"></p>
+    <p id="grassCount"></p>
+    <p id="grassEaterCount"></p>
+    <p id="gishatichCount"></p>
+    <p id="peopleCount"></p>
+    <p id="creatorCount"></p>
+    
+    <!-- <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Երևան</h1>
+            </tr>
+            <tr>
+                <h1>Սոֆի Մովսեսյան</h1>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է
+                    կրակը, կամ նրան կոխկրտում է գիշատիչը</td>
+                <td id="grassCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
+                    երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</td>
+                <td id="grassEaterCount"></td>
+            </tr>
+        </tbody>
+    </table> -->
+    <ul>
+        <li>
+            <button onclick="kill()">Kill them all</button>
+        </li>
+        <li>
+            <button onclick="addGrass()">Add grass</button>
+        </li>
+        <li>
+            <button onclick="addGrassEater()">Add grass eater</button>
+        </li>
+        <li>
+            <button onclick="addGishatich()">Add gishatich</button>
+        </li>
+        <li>
+            <button onclick="addPeople()">Add people</button>
+        </li>
+        <li>
+            <button onclick="addCreator()">Add flower</button>
+        </li>
+    </ul>
 </body>
+
 </html>

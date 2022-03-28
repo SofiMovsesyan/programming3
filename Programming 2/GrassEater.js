@@ -24,6 +24,16 @@ module.exports = class GrassEater extends LivingCreature {
             var newGrassEater = new GrassEater(newX, newY, this.index);
             grassEaterArr.push(newGrassEater);
         }
+
+        /*if (newCell && ((weath != 'winter' && this.energy >= 12) || (weath == 'winter' && this.energy >= 15))) {
+            var newX = newCell[0];
+            var newY = newCell[1];
+            matrix[newY][newX] = this.index;
+
+            var newGrassEater = new GrassEater(newX, newY, this.index);
+            grassEaterArr.push(newGrassEater);
+            // stugel winter-i masy, avelacnel vor ,enak winter-in bazmana, u tenc porcel
+        }*/
     }
 
     move() {
@@ -73,7 +83,7 @@ module.exports = class GrassEater extends LivingCreature {
 
                 }
             }
-
+            // es masum avelacnell exanaki masy
             this.mul()
         } else {
             this.move()

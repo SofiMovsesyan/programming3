@@ -1,6 +1,6 @@
+var socket = io();
 function setup() {
     var weath = 'winter'
-    var socket = io();
     var side = 20;
     var matrix = []
     let grassCountElement = document.getElementById('grassCount');
@@ -44,20 +44,64 @@ function setup() {
                     }
                 }
                 else if (matrix[y][x] == 2) {
-                    //
                     fill("yellow");
+                    /*if (weath == "spring") {
+                        fill("yellow")
+                    }
+                    else if(weath == "summer") {
+                        fill("#966208")
+                    }
+                    else if(weath == "autumn") {
+                        fill("lightgray")
+                    }
+                    else if(weath == "winter") {
+                        fill("#383636")
+                    }*/
                 }
                 else if (matrix[y][x] == 3) {
-                    //
                     fill("black");
+                    /*if (weath == "spring") {
+                        fill("#401d1d")
+                    }
+                    else if(weath == "summer") {
+                        fill("#9c6565")
+                    }
+                    else if(weath == "autumn") {
+                        fill("#381f1f")
+                    }
+                    else if(weath == "winter") {
+                        fill("black")
+                    }*/
                 }
                 else if (matrix[y][x] == 4) {
-                    //
-                    fill("blue");
+                    //fill("blue");
+                    if (weath == "spring") {
+                        fill("cyan")
+                    }
+                    else if(weath == "summer") {
+                        fill("lightblue")
+                    }
+                    else if(weath == "autumn") {
+                        fill("blue")
+                    }
+                    else if(weath == "winter") {
+                        fill("darkblue")
+                    }
                 }
                 else if (matrix[y][x] == 5) {
-                    //
-                    fill("magenta");
+                    //fill("magenta");
+                    if (weath == "spring") {
+                        fill("magenta")
+                    }
+                    else if(weath == "summer") {
+                        fill("red")
+                    }
+                    else if(weath == "autumn") {
+                        fill("pink")
+                    }
+                    else if(weath == "winter") {
+                        fill("#acacac")
+                    }
                 }
                 else if (matrix[y][x] == 0) {
                     fill("#acacac");
@@ -69,5 +113,25 @@ function setup() {
     }
 
 }
+function kill() {
+    socket.emit("kill")
+}
+function addGrass() {
+    socket.emit("add grass")
+}
+function addGrassEater() {
+    socket.emit("add grassEater")
+}
 
+function addGishatich() {
+    socket.emit("add gishatich")
+}
+
+function addPeople() {
+    socket.emit("add people")
+}
+
+function addCreator() {
+    socket.emit("add creator")
+}
 
