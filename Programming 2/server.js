@@ -122,7 +122,7 @@ function game() {
     io.sockets.emit("data", sendData);
 }
 
-setInterval(game, 1000)
+setInterval(game, 1000)//1000
 
 function kill() {
     grassArr = []
@@ -223,3 +223,16 @@ io.on('connection', function (socket) {
     socket.on("add people", addPeople);
     socket.on("add creator", addCreator)
 });
+
+var statistics = {};
+
+setInterval(function() {
+    statistics.grass = grassArr.length
+    statistics.grassEater = grassEaterArr.length
+    statistics.gishatich = gishatichArr.length
+    statistics.people = peopleArr.length
+    statistics.creator = creatorArr.length
+    fs.writeFile("statistics.json", JSON.stringify(statistics), function () {
+
+    })
+}, 1000)

@@ -25,6 +25,16 @@ module.exports = class GrassEater extends LivingCreature {
             grassEaterArr.push(newGrassEater);
         }
 
+        if (weath == 'winter') {
+            this.energy -= 2
+            this.multiply -= 2
+        }
+        if(weath == 'summer') {
+            this.energy += 3;
+            this.multiply += 3;
+            
+        }
+
         /*if (newCell && ((weath != 'winter' && this.energy >= 12) || (weath == 'winter' && this.energy >= 15))) {
             var newX = newCell[0];
             var newY = newCell[1];
@@ -32,7 +42,7 @@ module.exports = class GrassEater extends LivingCreature {
 
             var newGrassEater = new GrassEater(newX, newY, this.index);
             grassEaterArr.push(newGrassEater);
-            // stugel winter-i masy, avelacnel vor ,enak winter-in bazmana, u tenc porcel
+            
         }*/
     }
 
@@ -83,7 +93,6 @@ module.exports = class GrassEater extends LivingCreature {
 
                 }
             }
-            // es masum avelacnell exanaki masy
             this.mul()
         } else {
             this.move()

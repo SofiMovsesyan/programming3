@@ -10,30 +10,68 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
     <script src="script.js"></script>
     <style>
-    canvas {
-        display: block;
-        margin: 0 auto;
-    }
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
 
-    div {
-        display: inline-block;
-    }
+        div {
+            display: inline-block;
+        }
 
-    h1 {
-        padding: 20px;
-        text-align: center;
-    }
+        h1 {
+            padding: 15px;
+            text-align: center;
+        }
+
+
+        td,
+        th {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        ul {
+            display: flex;
+            height: 30px;
+            justify-content: center;
+        }
+
+        button {
+            background-color: rgb(12, 0, 139);
+            border-radius: 20px;
+            border: 1px solid #a9fff1;
+            text-align: center;
+            color: white;
+            user-select: none;
+            padding: 5px;
+            width: 120px;
+            box-sizing: border-box;
+            margin: 15px;
+        }
+
+        button:active {
+            transform: scale(.85);
+            border: 3px solid rgb(86, 48, 255);
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
     </style>
 </head>
 
-<body>
-    <p id="grassCount"></p>
-    <p id="grassEaterCount"></p>
-    <p id="gishatichCount"></p>
-    <p id="peopleCount"></p>
-    <p id="creatorCount"></p>
-    
-    <!-- <table class="table table-hover">
+<body style="background: #d9a7c7; background: linear-gradient(to bottom, #fffcdc, #d9a7c7);">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <h1>Ծրագրավորում III Երևան</h1>
@@ -47,24 +85,46 @@
                 <th scope="col">Նկարագրություն</th>
                 <th scope="col">Ծնվել է</th>
             </tr>
+
         </thead>
         <tbody>
             <tr>
                 <th scope="row">1</th>
                 <td scope="row" style="background-color:green;"></td>
-                <td>Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է
-                    կրակը, կամ նրան կոխկրտում է գիշատիչը</td>
+                <td>Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը: Այն գարնանը կանաչ
+                    է, ամռանը` բաց կանաչ, աշնանը` նարնջագույն, իսկ ձմռանը այն դառնում է սպիտակ:</td>
                 <td id="grassCount"></td>
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td scope="row" style="background-color:orange;"></td>
+                <td scope="row" style="background-color:yellow;"></td>
                 <td>Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
-                    երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</td>
+                    երբ նրան ուտում է գիշատիչը:</td>
                 <td id="grassEaterCount"></td>
             </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:black;"></td>
+                <td>Սևը գիշատիչն է, որը բազմանում է N հատ խոտակեր ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
+                    երբ նրան ուտում է մարդը:</td>
+                <td id="gishatichCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:blue;"></td>
+                <td>Կապույտը մարդն է, որը բազմանում է N հատ գիշատիչ ուտելուց հետո և մահանում է N հատ չուտելուց հետո:
+                </td>
+                <td id="peopleCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:magenta;"></td>
+                <td>Մուգ վարդագույնը ծաղիկն է, որը բազմանում է N ցիկլը մեկ: Այն գարնանը մուգ վարդագույն է, ամռանը`
+                    կարմիր, աշնանը` բաց վարդագույն, իսկ ձմռանը այն դառնում է բաց կապույտ:</td>
+                <td id="creatorCount"></td>
+            </tr>
         </tbody>
-    </table> -->
+    </table>
     <ul>
         <li>
             <button onclick="kill()">Kill them all</button>

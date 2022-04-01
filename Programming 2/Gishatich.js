@@ -24,6 +24,15 @@ module.exports = class Gishatich extends LivingCreature {
             var newGishatich = new Gishatich(newX, newY, this.index);
             gishatichArr.push(newGishatich);
         }
+
+        if (weath == 'winter') {
+            this.energy -= 3
+            this.multiply -= 3
+        }
+        if (weath == 'summer') {
+            this.energy += 4;
+            this.multiply += 4;
+        }
     }
 
     move() {

@@ -45,48 +45,12 @@ function setup() {
                 }
                 else if (matrix[y][x] == 2) {
                     fill("yellow");
-                    /*if (weath == "spring") {
-                        fill("yellow")
-                    }
-                    else if(weath == "summer") {
-                        fill("#966208")
-                    }
-                    else if(weath == "autumn") {
-                        fill("lightgray")
-                    }
-                    else if(weath == "winter") {
-                        fill("#383636")
-                    }*/
                 }
                 else if (matrix[y][x] == 3) {
                     fill("black");
-                    /*if (weath == "spring") {
-                        fill("#401d1d")
-                    }
-                    else if(weath == "summer") {
-                        fill("#9c6565")
-                    }
-                    else if(weath == "autumn") {
-                        fill("#381f1f")
-                    }
-                    else if(weath == "winter") {
-                        fill("black")
-                    }*/
                 }
                 else if (matrix[y][x] == 4) {
-                    //fill("blue");
-                    if (weath == "spring") {
-                        fill("cyan")
-                    }
-                    else if(weath == "summer") {
-                        fill("lightblue")
-                    }
-                    else if(weath == "autumn") {
-                        fill("blue")
-                    }
-                    else if(weath == "winter") {
-                        fill("darkblue")
-                    }
+                    fill("blue");
                 }
                 else if (matrix[y][x] == 5) {
                     //fill("magenta");
@@ -100,7 +64,7 @@ function setup() {
                         fill("pink")
                     }
                     else if(weath == "winter") {
-                        fill("#acacac")
+                        fill("lightblue")
                     }
                 }
                 else if (matrix[y][x] == 0) {

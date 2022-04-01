@@ -24,6 +24,15 @@ module.exports = class People extends LivingCreature{
             var newPeople = new People(newX, newY, this.index);
             peopleArr.push(newPeople);
         }
+
+        if (weath == 'winter') {
+            this.energy -= 2
+            this.multiply -= 2
+        }
+        if(weath == 'summer') {
+            this.energy += 3;
+			this.multiply += 3;
+        }
     }
 
     move() {
