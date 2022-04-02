@@ -1,6 +1,6 @@
 let LivingCreature = require('./LivingCreature')
 
-module.exports = class People extends LivingCreature{
+module.exports = class People extends LivingCreature {
     constructor(x, y, index) {
         super(x, y, index);
         this.energy = 8;
@@ -29,9 +29,9 @@ module.exports = class People extends LivingCreature{
             this.energy -= 2
             this.multiply -= 2
         }
-        if(weath == 'summer') {
+        if (weath == 'summer') {
             this.energy += 3;
-			this.multiply += 3;
+            this.multiply += 3;
         }
     }
 

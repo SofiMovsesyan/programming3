@@ -33,13 +33,13 @@ function setup() {
                     if (weath == "spring") {
                         fill("green")
                     }
-                    else if(weath == "summer") {
+                    else if (weath == "summer") {
                         fill("#bcf542")
                     }
-                    else if(weath == "autumn") {
+                    else if (weath == "autumn") {
                         fill("#ffbe4d")
                     }
-                    else if(weath == "winter") {
+                    else if (weath == "winter") {
                         fill("white")
                     }
                 }
@@ -57,13 +57,13 @@ function setup() {
                     if (weath == "spring") {
                         fill("magenta")
                     }
-                    else if(weath == "summer") {
+                    else if (weath == "summer") {
                         fill("red")
                     }
-                    else if(weath == "autumn") {
+                    else if (weath == "autumn") {
                         fill("pink")
                     }
-                    else if(weath == "winter") {
+                    else if (weath == "winter") {
                         fill("lightblue")
                     }
                 }

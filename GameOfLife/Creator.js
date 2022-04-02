@@ -1,6 +1,6 @@
 let LivingCreature = require('./LivingCreature')
 
-module.exports = class Creator extends LivingCreature{
+module.exports = class Creator extends LivingCreature {
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
